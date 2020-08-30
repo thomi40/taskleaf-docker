@@ -1,5 +1,5 @@
 FROM ruby:2.5.1
-RUN apt-get update -qq && apt-get install -y nodejs
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs
 RUN mkdir /taskleaf-docker
 WORKDIR /taskleaf-docker
 COPY Gemfile /taskleaf-docker/Gemfile
